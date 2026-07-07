@@ -51,7 +51,7 @@ function App() {
                     <a className="instagram" href="https://www.instagram.com/devopsshack/">Instagram</a>
                 </div>
             </div>
-            <h1>DevOps Shack User Management App</h1>
+            <h1>Praveen Thallapally</h1>
             <div className="form-container">
                 <input type="text" placeholder="New user name" value={name} onChange={(e) => setName(e.target.value)} />
                 <input type="email" placeholder="New user email" value={email} onChange={(e) => setEmail(e.target.value)} />
