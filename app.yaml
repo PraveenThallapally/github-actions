@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-app
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: nodejs-app
+
+  template:
+    metadata:
+      labels:
+        app: nodejs-app
+
+    spec:
+      imagePullSecrets:
+        - name: regcred
+
+      containers:
+        - name: nodejs-app
+          image: praveen1351/devopsshack:v1
+
+          ports:
+            - containerPort: 5000
+
+          env:
+            - name: DB_HOST
+              value: "database-1.cj6q60yeqbje.us-west-2.rds.amazonaws.com"
+
+            - name: DB_NAME
+              value: "mydb"
+
+            - name: DB_USER
+              value: "admin"
+
+            - name: DB_PASSWORD
+              value: "Praveen123"
+
+            - name: DATABASE_URL
+              value: "mysql://admin:Praveen123@database-1.cj6q60yeqbje.us-west-2.rds.amazonaws.com:3306/mydb"
