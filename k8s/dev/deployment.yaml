@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: shack-c
-          image: praveen1351/shack:v5
+          image: praveen1351/shack:a380f2d22c13444184058556a8b9d3915a5973f4
           ports:
             - containerPort: 5000
           envFrom:
