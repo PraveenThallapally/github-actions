@@ -12,6 +12,8 @@ spec:
     metadata:
       labels:
         app: shack
+      annotations:
+        instrumentation.opentelemetry.io/inject-nodejs: "true"
     spec:
       containers:
         - name: shack-c
